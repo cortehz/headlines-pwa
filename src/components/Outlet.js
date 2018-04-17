@@ -40,7 +40,7 @@ class Outlet extends Component {
   render() {
     return (
       <div className="outletSection">
-        <h4>Outlet Description:</h4>
+        <h4>Source:</h4>
 
         {this.state.data.map((item, y) => {
           if (item.id === this.state.value) {

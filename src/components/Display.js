@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from "react";
+import axios from "axios";
 
 class Display extends Component {
   constructor(props) {
@@ -37,19 +37,19 @@ class Display extends Component {
     var month = time.getMonth() + 1;
     var composedTime =
       day +
-      '/' +
+      "/" +
       month +
-      '/' +
+      "/" +
       year +
-      ' | ' +
+      " | " +
       hour +
-      ':' +
-      (minute < 10 ? '0' + minute : minute);
+      ":" +
+      (minute < 10 ? "0" + minute : minute);
     return composedTime;
   }
 
   getArticles(url) {
-    const apiKey = 'ef90a7354e49437abcd71a8748c9cfd7';
+    const apiKey = "ef90a7354e49437abcd71a8748c9cfd7";
     // Make HTTP reques with Axios
     axios
       .get(
@@ -68,17 +68,17 @@ class Display extends Component {
 
   render() {
     return (
-      <div className="cardsContainer">
+      <div className="wrapper container">
         {this.state.articles.map((news, i) => {
           return (
-            <div className="card" key={i}>
-              <div className="content">
+            <div className="card-group" key={i}>
+              <div className="col-md-6 namess">
                 <h3>
                   <a href={news.url} target="_blank">
                     {news.title}
                   </a>
                 </h3>
-                <p>{news.description}</p>
+                <p className="text-center">{news.description}</p>
                 <div className="author">
                   <p>
                     By <i>{news.author ? news.author : this.props.default}</i>
@@ -86,8 +86,8 @@ class Display extends Component {
                   <p>{this.formatDate(news.publishedAt)}</p>
                 </div>
               </div>
-              <div className="image">
-                <img src={news.urlToImage} alt="" />
+              <div className="image col-md-6 namess">
+                <img src={news.urlToImage} alt="" width="400px" height="300" />
               </div>
             </div>
           );

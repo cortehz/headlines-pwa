@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import Display from './Display.js';
-import './Display.css';
-import Outlet from './Outlet.js';
-import './Outlet.css';
+import React, { Component } from "react";
+import axios from "axios";
+import Display from "./Display.js";
+import "./Display.css";
+import Outlet from "./Outlet.js";
+import "./Outlet.css";
 
 class Search extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Search extends Component {
     this.handleChange = this.handleChange.bind(this);
 
     this.apiUrl =
-      'https://newsapi.org/v2/sources?language=en&apiKey=ef90a7354e49437abcd71a8748c9cfd7';
+      "https://newsapi.org/v2/sources?language=en&apiKey=ef90a7354e49437abcd71a8748c9cfd7";
   }
 
   handleChange(event) {
@@ -42,7 +42,7 @@ class Search extends Component {
   render() {
     return (
       <div className="">
-        <h4>Select from {this.state.count} News Outlets</h4>
+        <h4>Select from {this.state.count} News Sources</h4>
         <select value={this.state.value} onChange={this.handleChange}>
           >
           {this.state.data.map((outlet, i) => {

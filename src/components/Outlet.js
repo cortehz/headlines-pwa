@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import './Outlet.css';
-import { findFlag } from './helpers';
+import React, { Component } from "react";
+import axios from "axios";
+import "./Outlet.css";
 
 class Outlet extends Component {
   constructor(props) {
@@ -41,7 +40,7 @@ class Outlet extends Component {
   render() {
     return (
       <div className="outletSection">
-        <h4>Outlet Description 📰</h4>
+        <h4>Outlet Description:</h4>
 
         {this.state.data.map((item, y) => {
           if (item.id === this.state.value) {
@@ -53,14 +52,6 @@ class Outlet extends Component {
                       {item.name}
                     </a>
                   </h4>
-                  <img
-                    className="flagCode"
-                    src={findFlag(item.country)}
-                    alt="flag"
-                  />
-                  <p>{item.country.toUpperCase()}</p>
-                  <p>{item.category.replace(/\b\w/g, l => l.toUpperCase())}</p>
-                  <p>{item.language.toUpperCase()}</p>
                 </div>
                 <p>{item.description}</p>
               </div>

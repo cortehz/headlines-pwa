@@ -51,3 +51,7 @@ footer {
   color: darkslategray;
   border-top: 1px solid #eee;
 }
+
+.appHeader {
+  background: aqua;
+}

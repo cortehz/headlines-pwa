@@ -13,13 +13,13 @@ class App extends Component {
     return (
       <div className="app">
         <div className="appHeader">
-          {/* <img className="appLogo" src={logo} alt="React Logo" /> */}
-
           <div className="title">
-            <h1>&lt;Headlines&gt;</h1>
-            <h4>
+            <h1 className="headlines" id="solid">
+              Headlines
+            </h1>
+            <h4 className="power">
               Powered by
-              <a href="https://newsapi.org/"> News API </a>🔥{" "}
+              <a href="https://newsapi.org/"> News API </a>{" "}
             </h4>
           </div>
 

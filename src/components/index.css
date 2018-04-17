@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -20,11 +22,14 @@ a {
 }
 
 a:hover {
-  border-bottom: 2px solid #FF8F00;
+  border-bottom: 2px solid #ff8f00;
 }
 
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+}
+.appHeader {
+  background: green;
 }

@@ -1,41 +1,25 @@
-import React, { Component } from 'react';
-import './Footer.css';
+import React, { Component } from "react";
+import "./Footer.css";
 
 class Footer extends Component {
   render() {
     return (
-      <div className="footerSection">
-        <div className="social">
-          <a href="https://github.com/alemesa" target="_blank">
-            <i className="fa fa-2x fa-github" aria-hidden="true" />
-          </a>
-          <a href="https://twitter.com/alelikesramen" target="_blank">
-            <i className="fa fa-2x fa-twitter" aria-hidden="true" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/alejandro-mesa-suarez-604916a2/"
-            target="_blank"
-          >
-            <i className="fa fa-2x fa-linkedin" aria-hidden="true" />
-          </a>
-          <a
-            id="repo"
-            href="https://github.com/alemesa/React-News-App"
-            target="_blank"
-          >
-            Repo
-            <i className="fa fa-code-fork" aria-hidden="true" />
-          </a>
+      <div>
+        <div className="contact">
+          <h2>Built by Samuel Omanchi.</h2>
+          <h3>Reach Out:</h3>
+          <div className="social-list">
+            <button className="social-btn" href="mailto:">
+              <i className="fa fa-envelope-square fa-4x" />
+            </button>
+            <button className="social-btn" href="https://twitter.com/cortehz">
+              <i className="fa fa-twitter-square fa-4x" />
+            </button>
+            <button className="social-btn" href="https://github.com/cortehz">
+              <i className="fa fa-git-square fa-4x" />
+            </button>
+          </div>
         </div>
-
-        <a className="smoothScroll" href="#">
-          <i className="fa fa-2x fa-arrow-up" aria-hidden="true" />
-        </a>
-
-        <span className="coffee">
-          Made with
-          <i className="fa fa-coffee" aria-hidden="true" />
-        </span>
       </div>
     );
   }
